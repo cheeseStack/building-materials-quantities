@@ -61,7 +61,7 @@ header .content {
     display: block;
 }
 
-nav ul {
+nav ul, ul {
     list-style: none;
     display: flex;
 }

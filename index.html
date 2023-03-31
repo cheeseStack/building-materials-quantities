@@ -55,32 +55,105 @@
             <!-- Form for the wall length and height quantities -->
 
             <div id="num-walls">
-                <form action="./calculation.html" method="GET">
+                <form action="#num-walls" method="GET">
                     <label for="numberOfWalls">Number of wall sections: </label>
-                    <input type="number" name="numberOfWalls" id="numberOfWalls" required min="1">
-                    <input type="submit">
+                    <input type="number" name="numberOfWalls" id="numberOfWalls" required min="1" value="1">
+                    <input type="submit" id="walls-button">
                 </form>
             </div>
+            <hr>
 
             <!-- Form for a sections of wall -->
             <!-- ideally I want to generate input fields for the inputted number of walls above -->
             <div id="wall-sections">
-                <div class="wall-section">
-                    <form action="./calculation.html" method="GET">
+                <ul class="wall-sections">
+                    <li id="wall-form-1">
+                        <form action="#wall-sections" method="GET">
                         <span>Brick or Block? </span>
                         <input type="radio" id="brick" name="brickOrBlock" value="brick" required>
                         <label for="brick">brick</label>
                         <input type="radio" value="block" name="brickOrBlock" id="block">
                         <label for="block">block</label>
                         <br>
-                        <label for="skins">Number of skins:</label>
-                        <input type="number" name="skins" id="skins" required min="1" max="4">
+                        <label for="skins">Number of Wall Skins:</label>
+                        <input type="number" name="skins" id="skins" required min="1" max="4" value="2">
                         <br>
-                        <label for="length">Wall length (metres): </label>
-                        <input type="number" name="length" id="length" required min="0" placeholder="eg. 2.5 ">
+                        <label for="length">Wall Length (metres): </label>
+                        <input type="number" name="length" id="length" required min="0" step="any" placeholder="eg. 6.25 ">
+                        <br>
+                        <label for="length">Wall Height (metres): </label>
+                        <input type="number" name="height" id="height" required min="0" step="any" placeholder="eg. 2.4 ">
+                        <br>
+                        <input type="submit" id ='submit-button' value="Calculate the number of bricks or blocks needed">
                     </form>
-                </div>
+                    </li>
+                    <li id="wall-form-2">
+                        <form action="./calculation.html" method="GET">
+                        <span>Brick or Block? </span>
+                        <input type="radio" id="brick" name="brickOrBlock" value="brick" required>
+                        <label for="brick">brick</label>
+                        <input type="radio" value="block" name="brickOrBlock" id="block">
+                        <label for="block">block</label>
+                        <br>
+                        <label for="skins">Number of Wall Skins:</label>
+                        <input type="number" name="skins" id="skins" required min="1" max="4" value="2">
+                        <br>
+                        <label for="length">Wall Length (metres): </label>
+                        <input type="number" name="length" id="length" required min="0" step="any" placeholder="eg. 6.25 ">
+                        <br>
+                        <label for="length">Wall Height (metres): </label>
+                        <input type="number" name="height" id="height" required min="0" step="any" placeholder="eg. 2.4 ">
+                        <br>
+                        <input type="submit" value="Calculate the number of bricks or blocks needed">
+                    </form>
+                    </li>
+                    <li id="wall-form-3">
+                        <form action="./calculation.html" method="GET">
+                        <span>Brick or Block? </span>
+                        <input type="radio" id="brick" name="brickOrBlock" value="brick" required>
+                        <label for="brick">brick</label>
+                        <input type="radio" value="block" name="brickOrBlock" id="block">
+                        <label for="block">block</label>
+                        <br>
+                        <label for="skins">Number of Wall Skins:</label>
+                        <input type="number" name="skins" id="skins" required min="1" max="4" value="2">
+                        <br>
+                        <label for="length">Wall Length (metres): </label>
+                        <input type="number" name="length" id="length" required min="0" step="any" placeholder="eg. 6.25 ">
+                        <br>
+                        <label for="length">Wall Height (metres): </label>
+                        <input type="number" name="height" id="height" required min="0" step="any" placeholder="eg. 2.4 ">
+                        <br>
+                        <input type="submit" value="Calculate the number of bricks or blocks needed">
+                    </form>
+                    </li>
+                    <li id="wall-form-4">
+                        <form action="./calculation.html" method="GET">
+                        <span>Brick or Block? </span>
+                        <input type="radio" id="brick" name="brickOrBlock" value="brick" required>
+                        <label for="brick">brick</label>
+                        <input type="radio" value="block" name="brickOrBlock" id="block">
+                        <label for="block">block</label>
+                        <br>
+                        <label for="skins">Number of Wall Skins:</label>
+                        <input type="number" name="skins" id="skins" required min="1" max="4" value="2">
+                        <br>
+                        <label for="length">Wall Length (metres): </label>
+                        <input type="number" name="length" id="length" required min="0" step="any" placeholder="eg. 6.25 ">
+                        <br>
+                        <label for="length">Wall Height (metres): </label>
+                        <input type="number" name="height" id="height" required min="0" step="any" placeholder="eg. 2.4 ">
+                        <br>
+                        <input type="submit" value="Calculate the number of bricks or blocks needed">
+                    </form>
+                    </li>
+                </ul>
+                <hr>
 
+                <!-- dynamically display the area here -->
+                <div id="output">
+                    <h3 id="area-result"></h3>
+                </div>
                 <!-- button to add another wall length -->
                 <div class="add-wall-button">
                     <button class="add-wall">Add a wall section</button>
