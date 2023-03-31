@@ -21,8 +21,8 @@ const opening3Width = vals.get('opening-3-width');
 const opening3Height = vals.get('opening-3-height');
 
 
+let exactQuantity = 0;
 const wallArea = () => {
-    let exactQuantity = 0;
     const areaToRemove = (opening1Height
     *opening1Width) + (opening2Height*opening2Width) + (opening3Height*opening3Width);
 
@@ -30,14 +30,23 @@ const wallArea = () => {
     
     if (brickOrBlock === 'brick') {
         exactQuantity = Math.ceil(totalArea / areaOfBrick)
-    } else if (brickOrBlock === 'brick'){
+    } else if (brickOrBlock === 'block'){
         exactQuantity = Math.ceil(totalArea / areaOfBlock)
     } else {
         exactQuantity = null
     }
-    return exactQuantity.toLocaleString("en-GB")
+    return exactQuantity
 }
 
+// call the function to update the exactQuantity variab
+wallArea()
+
+const wallCalcMessage = document.getElementById('wall-calc-message')
+wallCalcMessage.innerHTML = `Quantity of ${brickOrBlock}s needed:`
+
+   //  update the DOM of calculation.html
+const wallCalcResult = document.getElementById('wall-calc-result')
+wallCalcResult.innerText = `${exactQuantity}`
 
 
 console.log(wallArea())

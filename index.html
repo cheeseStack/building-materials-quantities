@@ -55,7 +55,7 @@
             <!-- Form for the wall length and height quantities -->
 
             <div id="num-walls">
-                <form action="./calculation.html" method="GET">
+                <form action="#brick-quantities" method="GET">
                     <label for="numberOfWalls">Number of wall sections: </label>
                     <input type="number" name="numberOfWalls" id="numberOfWalls" required min="1" value ="1">
                     <input type="submit">
@@ -78,31 +78,31 @@
                         <input type="number" name="skins" id="skins" required min="1" max="4">
                         <br>
                         <label for="length">Wall length (metres): </label>
-                        <input type="number" name="length" id="length" required min="0" placeholder="eg. 4.5 ">
+                        <input type="number" name="length" id="length" required min="0" step="any"  placeholder="eg. 4.5 ">
                         <br>
                         <label for="height">Wall Height (metres):</label>
-                        <input type="number" name="height" id="height" required min="0" placeholder="eg. 2.4 ">
+                        <input type="number" name="height" id="height" required min="0" step="any" placeholder="eg. 2.4 ">
                         <br>
                         <p>Enter details of any windows or doors:</p>
                         <span>Window / Door 1:&nbsp;&nbsp;</span>
                         <label for="opening-1-width">Opening width (m): </label>
-                        <input type="number" id="opening-1-width" name="opening-1-width" value="0"><span>&nbsp;&nbsp;</span>
+                        <input type="number" id="opening-1-width" name="opening-1-width" step="any" value="0"><span>&nbsp;&nbsp;</span>
                         <label for="opening-1-height">Opening height (m): </label>
-                        <input type="number" id="opening-1-height" name="opening-1-height" value="0">
+                        <input type="number" id="opening-1-height" name="opening-1-height" step="any" value="0">
                         <br>
                         <span>Window / Door 2:&nbsp;&nbsp;</span>
                         <label for="opening-2-width">Opening width (m): </label>
-                        <input type="number" id="opening-1-width" name="opening-2-width" value="0"><span>&nbsp;&nbsp;</span>
+                        <input type="number" id="opening-1-width" name="opening-2-width" step="any" value="0"><span>&nbsp;&nbsp;</span>
                         <label for="opening-2-height">Opening height (m): </label>
                         <input type="number" id="opening-1-height" name="opening-2-height" value="0">
                         <br>
                         <span>Window / Door 3:&nbsp;&nbsp;</span>
                         <label for="opening-3-width">Opening width (m): </label>
-                        <input type="number" id="opening-1-width" name="opening-3-width" value="0"><span>&nbsp;&nbsp;</span>
+                        <input type="number" id="opening-1-width" name="opening-3-width" step="any" value="0"><span>&nbsp;&nbsp;</span>
                         <label for="opening-3-height">Opening height (m): </label>
-                        <input type="number" id="opening-1-height" name="opening-3-height" value="0">
+                        <input type="number" id="opening-1-height" name="opening-3-height" step="any" value="0">
                         <br>
-                        <input type="submit" value="Calculate bricks or blocks needed">
+                        <input type="submit" step="any" id="submit-button" value="Calculate bricks or blocks needed">
                     </form>
                 </div>
 
