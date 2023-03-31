@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+    <title>Keith's Quantity calculators</title>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="content">
+            <!-- left logo and title -->
+            <div id="header-logo">
+                <div class= "img-container">
+                    <a href="index.html"><img src="./resources/img/logo/cheeseStackLogo.png" alt="logo"></a>
+                </div>
+                <a href="index.html"><p>Keith's Quantity calculators</p></a>
+            </div>
+            
+            <!-- navbar on the right -->
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Calculators</a></li>
+                    <li><a href="#">Make a suggestion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Section for a title and FUTURE image -->
+        <section id="top">
+            <h1>Keith's Quantity Calculators</h1>
+        </section>
+        <hr>
+
+        <!-- Search bar section -->
+        <section id="search-bar">
+            <h3 class="center">Seach for a Calculator</h3>
+            <!-- have a form for a search bar to search for the desired calculator -->
+            <form action="#search-bar" method="GET">
+                <label for="calculator-search">Search Calculators: </label>
+                <input type="text" name="calculator-search" id="calculator-search" placeholder="eg. bricks" pattern="[a-zA-z]+">
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="brick-quantities">   
+            <!-- Form for the wall length and height quantities -->
+
+            <div id="num-walls">
+                <form action="./calculation.html" method="GET">
+                    <label for="numberOfWalls">Number of wall sections: </label>
+                    <input type="number" name="numberOfWalls" id="numberOfWalls" required min="1">
+                    <input type="submit">
+                </form>
+            </div>
+
+            <!-- Form for a sections of wall -->
+            <!-- ideally I want to generate input fields for the inputted number of walls above -->
+            <div id="wall-sections">
+                <div class="wall-section">
+                    <form action="./calculation.html" method="GET">
+                        <span>Brick or Block? </span>
+                        <input type="radio" id="brick" name="brickOrBlock" value="brick" required>
+                        <label for="brick">brick</label>
+                        <input type="radio" value="block" name="brickOrBlock" id="block">
+                        <label for="block">block</label>
+                        <br>
+                        <label for="skins">Number of skins:</label>
+                        <input type="number" name="skins" id="skins" required min="1" max="4">
+                        <br>
+                        <label for="length">Wall length (metres): </label>
+                        <input type="number" name="length" id="length" required min="0" placeholder="eg. 2.5 ">
+                    </form>
+                </div>
+
+                <!-- button to add another wall length -->
+                <div class="add-wall-button">
+                    <button class="add-wall">Add a wall section</button>
+                </div>
+            </div>
+            
+        </section>
+        
+
+
+
+
+    </main>
+
+
+    <footer>
+        <div id="copyright">
+            <nav>
+                <ul>
+                    <li><span class="copyright-span">email</span><a href="mailto:keith@cheesestack.net">keith@cheesestack.net</a></li>
+                    <li><span class="copyright-span">phone</span><a href="tel:+447738001729">07738001729</a></li>
+                    <li><a href="https://www.linkedin.com/in/keith-rochfort-071975101/"><img src="./resources/img/externalLogos/LinkedIn-Logos/LinkedIn-Logos/LI-Logo.png" alt="LinkedIn Logo" class="img-container"></a></li>
+                    <li><a href="https://www.linkedin.com/in/keith-rochfort-071975101/"><img class="img-container" src="./resources/img/externalLogos/GitHub-Logos/GitHub-Logos/GitHub_Logo.png" alt="GitHub Logo"></a></li>
+                </ul>
+            </nav>
+            <div class="copyright-text">
+                &copy; <a href="https://cheesestack.net/" target="_blank"> cheeseStack</a><span> 2023</span>
+            </div>
+            
+        </div>
+
+    </footer>
+    
+</body>
+</html>
